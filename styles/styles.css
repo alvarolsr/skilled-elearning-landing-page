@@ -14,8 +14,8 @@
 
 /* general styles */
 body {
-  /*padding: 22px 16px;*/
   min-width: 375px;
+  max-width: 1440px;
   font-family: "Plus Jakarta Sans", "sans-serif";
 }
 
@@ -48,6 +48,7 @@ h1 {
   font-size: 40px;
   font-weight: 800;
   line-height: 50.4px;
+  margin: 0;
 }
 
 h2 {
@@ -93,6 +94,7 @@ button {
 
 .footer-button {
   background-image: linear-gradient(#4851ff, #f02aa6);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .title-button {
@@ -104,8 +106,9 @@ button {
 }
 
 /* Styles for following sections */
-.title-container {
-  padding-bottom: 46px;
+.title-box {
+  margin-top: 22px;
+  margin-bottom: 26px;
 }
 
 .description {
@@ -113,13 +116,14 @@ button {
   margin-bottom: 24px;
 }
 
+/* styles for image container */
 .image-container {
-  /*width: 116vw;*/
-  padding: 0;
+  width: 108%;
+  margin-left: -4%;
   overflow: hidden;
 }
 
-.image-hero {
+.image-hero-mobile {
   /* image width from file: 435px - image width per design: 375px*/
   /* (435px / 375px) * 100% = 116% */
   /* margin left is set to -8% so image is positioned properly as per design */
@@ -129,13 +133,14 @@ button {
 
 /* styles for card container */
 .card-container {
+  margin-top: -20px;
   padding-bottom: 40px;
   background-image: linear-gradient(#ffffff, #f0f1ff);
 }
 
 .card {
   border-radius: 10px;
-  padding: 0px 28px 32px 24px;
+  padding: 0px 29px 32px 28px;
   margin-bottom: 40px;
 }
 
@@ -159,4 +164,150 @@ button {
 .course-description {
   margin-top: 16px;
   margin-bottom: 24px;
+}
+
+/* Styles for tablets */
+@media screen and (min-width: 481px) {
+  body {
+    background-image: url("../assets/image-hero-tablet@2x.png");
+    background-position: right -298px top -100px;
+    background-size: 695px;
+    background-repeat: no-repeat;
+  }
+
+  header,
+  footer,
+  section {
+    padding: 0 40px;
+  }
+
+  .title-container {
+    height: 561px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* */
+  .title-box {
+    /*width: 52vw;*/
+    min-width: 398px;
+    margin-top: 105px;
+    margin-bottom: 172px;
+  }
+
+  /* hide picture for mobile screens */
+  .image-hero-mobile {
+    display: none;
+  }
+
+  .card-container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    box-sizing: border-box;
+    width: 49%;
+    max-width: 339px;
+    padding: 0px 21px 32px 32px;
+  }
+
+  .checkout-card {
+    padding-top: 56px;
+  }
+}
+
+@media screen and (min-width: 769px) /*and (max-width: 1440px) */ {
+  body {
+    background-image: url("../assets/image-hero-desktop@2x.png");
+    background-position: right -336px top -154px;
+    background-size: 1046px;
+    background-repeat: no-repeat;
+  }
+
+  header,
+  footer,
+  section {
+    padding: 0 165px;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 70.56px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  button {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  header {
+    height: 104px;
+  }
+
+  .header-button,
+  .footer-button {
+    width: 167px;
+    height: 56px;
+    border-radius: 28px;
+  }
+
+  .title-button {
+    height: 63px;
+    border-radius: 31.5px;
+  }
+
+  .header-button:hover {
+    background-color: #666ca3;
+  }
+
+  .title-container {
+    height: 41%;
+    max-height: 757px;
+  }
+
+  .title-button:hover,
+  .footer-button:hover {
+    opacity: 0.5;
+  }
+
+  .title-box {
+    /*width: 32vw;*/
+    min-width: 457px;
+    max-width: 457px;
+    margin-top: 146px;
+    margin-bottom: 226px;
+  }
+
+  .description {
+    margin-top: 29px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    box-sizing: border-box;
+    width: 32%;
+    max-width: 350px;
+    padding: 0px 32px 40px 32px;
+  }
+
+  .checkout-card {
+    padding-top: 64px;
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
