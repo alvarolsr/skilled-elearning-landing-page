@@ -52,13 +52,27 @@ h1 {
 }
 
 h2 {
-  font-size: 28px;
-  margin: auto 0;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 h3 {
   font-size: 20px;
   margin-top: 24px;
+}
+
+.header-logo,
+.footer-logo {
+  font-size: 28px;
+  margin: auto 0;
+}
+
+.header-logo {
+  color: #000000;
+}
+
+.footer-logo {
+  color: #ffffff;
 }
 
 p {
@@ -241,6 +255,12 @@ button {
   }
 
   h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .header-logo,
+  .footer-logo {
     font-size: 36px;
   }
 
