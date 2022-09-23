@@ -235,7 +235,7 @@ button {
   }
 }
 
-@media screen and (min-width: 769px) /*and (max-width: 1440px) */ {
+@media screen and (min-width: 769px) {
   body {
     background-image: url("../assets/image-hero-desktop@2x.png");
     background-position: right -336px top -154px;
