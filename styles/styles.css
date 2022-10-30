@@ -180,6 +180,19 @@ button {
   margin-bottom: 24px;
 }
 
+.course-content {
+  height: 100%;
+  border-spacing: 0;
+}
+
+.table-top {
+  vertical-align: top;
+}
+
+.table-bottom {
+  vertical-align: bottom;
+}
+
 /* Styles for tablets */
 @media screen and (min-width: 481px) {
   body {
@@ -203,7 +216,6 @@ button {
 
   /* */
   .title-box {
-    /*width: 52vw;*/
     min-width: 398px;
     margin-top: 105px;
     margin-bottom: 172px;
@@ -224,14 +236,21 @@ button {
   }
 
   .card {
-    box-sizing: border-box;
     width: 49%;
-    max-width: 339px;
     padding: 0px 21px 32px 32px;
+    min-height: 259px;
   }
 
   .checkout-card {
     padding-top: 56px;
+  }
+
+  .course-content {
+    padding-bottom: 32px;
+  }
+
+  .course-description {
+    margin-bottom: 0;
   }
 }
 
@@ -304,9 +323,7 @@ button {
   }
 
   .title-box {
-    /*width: 32vw;*/
-    min-width: 457px;
-    max-width: 457px;
+    width: 457px;
     margin-top: 146px;
     margin-bottom: 226px;
   }
@@ -320,7 +337,7 @@ button {
 
   .card {
     box-sizing: border-box;
-    width: 32%;
+    width: 33%;
     max-width: 350px;
     padding: 0px 32px 40px 32px;
   }
@@ -329,5 +346,13 @@ button {
     padding-top: 64px;
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .course-content {
+    padding-bottom: 40px;
+  }
+
+  .course-description {
+    margin-bottom: 0;
   }
 }
